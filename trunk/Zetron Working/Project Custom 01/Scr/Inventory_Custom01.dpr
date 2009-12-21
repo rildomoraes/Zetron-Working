@@ -1,0 +1,127 @@
+program Inventory_Custom01;
+
+
+
+uses
+  Forms,
+  Ioctl in '..\..\Modul General\Library\Ioctl.pas',
+  untConstanta in '..\..\Modul General\Library\untConstanta.pas',
+  untFastReport in '..\..\Modul General\Library\untFastReport.pas',
+  untInitVCL in '..\..\Modul General\Library\untInitVCL.pas',
+  untProcedure in '..\..\Modul General\Library\untProcedure.pas',
+  untZetronServer in '..\..\Modul General\Library\untZetronServer.pas',
+  dtmAccounting in 'Data Module Accounting\dtmAccounting.pas' {dmAccounting: TDataModule},
+  dtmGlobal in '..\..\Modul General\Data Module Global\dtmGlobal.pas' {dmGlobal: TDataModule},
+  dtmInventory in 'Data Modul Inventory\dtmInventory.pas' {dmInventory: TDataModule},
+  frmAbout in '..\..\Modul General\Form About\frmAbout.pas' {fmAbout},
+  frmBackupDatabase in '..\..\Modul General\Form Backup Database\frmBackupDatabase.pas' {fmBackupDatabase},
+  frmChangePassword in '..\..\Modul General\Form Change Password\frmChangePassword.pas' {fmChangePassword},
+  frmCity in '..\..\Modul General\Form City\frmCity.pas' {fmCity},
+  frmCompany in '..\..\Modul General\Form Company\frmCompany.pas' {fmCompany},
+  frmCountry in '..\..\Modul General\Form Country\frmCountry.pas' {fmCountry},
+  frmDepartment in '..\..\Modul General\Form Department\frmDepartment.pas' {fmDepartment},
+  frmEmployee in '..\..\Modul General\Form Employee\frmEmployee.pas' {fmEmployee},
+  frmExportImportData in '..\..\Modul General\Form Export Import Data\frmExportImportData.pas' {fmExportImportData},
+  frmExportReport in '..\..\Modul General\Form Export Report\frmExportReport.pas' {fmExportReport},
+  frmImportReport in '..\..\Modul General\Form Import Report\frmImportReport.pas' {fmImportReport},
+  frmLogin in '..\..\Modul General\Form Login\frmLogin.pas' {fmLogin},
+  frmMaintainceDatabase in '..\..\Modul General\Form Maintaince Database\frmMaintainceDatabase.pas' {fmMaintainceDatabase},
+  frmMenuOptions in '..\..\Modul General\Form Menu Options\frmMenuOptions.pas' {fmMenuOptions},
+  frmOpenWaiting in '..\..\Modul General\Form Open Waiting\frmOpenWaiting.pas' {fmOpenWaiting},
+  frmPosition in '..\..\Modul General\Form Position\frmPosition.pas' {fmPosition},
+  frmPreviewFastReport in '..\..\Modul General\Form Preview FastReport\frmPreviewFastReport.pas' {fmPreviewFastReport},
+  frmPrintFastReport in '..\..\Modul General\Form Print FastReport\frmPrintFastReport.pas' {fmPrintFastReport},
+  frmProvince in '..\..\Modul General\Form Province\frmProvince.pas' {fmProvince},
+  frmReportCategory in '..\..\Modul General\Form Report Category\frmReportCategory.pas' {fmReportCategory},
+  frmReportDesigner in '..\..\Modul General\Form Report Designer\frmReportDesigner.pas' {fmReportDesigner},
+  frmRestoreDatabase in '..\..\Modul General\Form Restore Database\frmRestoreDatabase.pas' {fmRestoreDatabase},
+  frmSecurity in '..\..\Modul General\Form Security\frmSecurity.pas' {fmSecurity},
+  frmSettingGlobal in '..\..\Modul General\Form Setting Global\frmSettingGlobal.pas' {fmSettingGlobal},
+  frmSettingGlobalInventoryCustom01 in '..\..\Modul General\Form Setting Global\frmSettingGlobalInventoryCustom01.pas' {fmSettingGlobalInventoryCustom01},
+  frmSettingLocal in '..\..\Modul General\Form Setting Local\frmSettingLocal.pas' {fmSettingLocal},
+  frmUni in '..\..\Modul General\Form Template\frmUni.pas' {FormUni},
+  frmUniDB in '..\..\Modul General\Form Template\frmUniDB.pas' {FormUniDB},
+  frmUniDBEditableEx in '..\..\Modul General\Form Template\frmUniDBEditableEx.pas' {FormUniDBEditableEx},
+  frmUniDBNavigator in '..\..\Modul General\Form Template\frmUniDBNavigator.pas' {FormUniDBNavigator},
+  frmUniDBNavigatorEx in '..\..\Modul General\Form Template\frmUniDBNavigatorEx.pas' {FormUniDBNavigatorEx},
+  frmUniDBPrintableEx in '..\..\Modul General\Form Template\frmUniDBPrintableEx.pas' {FormUniDBPrintableEx},
+  frmUniDisplay in '..\..\Modul General\Form Template\frmUniDisplay.pas' {FormUniDisplay},
+  frmUniDisplayPeriod in '..\..\Modul General\Form Template\frmUniDisplayPeriod.pas' {FormUniDisplayPeriod},
+  frmUniMainMenu in '..\..\Modul General\Form Template\frmUniMainMenu.pas' {FormUniMainMenu},
+  frmUniMasterEx in '..\..\Modul General\Form Template\frmUniMasterEx.pas' {FormUniMasterEx},
+  frmUniPosition in '..\..\Modul General\Form Template\frmUniPosition.pas' {FormUniPosition},
+  frmUniTransactionApprovalEx in '..\..\Modul General\Form Template\frmUniTransactionApprovalEx.pas' {FormUniTransactionApprovalEx},
+  frmUniTransactionEx in '..\..\Modul General\Form Template\frmUniTransactionEx.pas' {FormUniTransactionEx},
+  untCustom01 in 'Library\untCustom01.pas',
+  dtmShare in 'Data Module Share\dtmShare.pas' {dmShare: TDataModule},
+  frmAssemblyTransaction in 'Form Assembly Transaction\frmAssemblyTransaction.pas' {fmAssemblyTransaction},
+  frmBank in 'Form Bank\frmBank.pas' {fmBank},
+  frmBankAccount in 'Form Bank Account\frmBankAccount.pas' {fmBankAccount},
+  frmCategory in 'Form Category\frmCategory.pas' {fmCategory},
+  frmClosingYear in 'Form Closing Year\frmClosingYear.pas' {fmClosingYear},
+  frmCurrency in 'Form Currency\frmCurrency.pas' {fmCurrency},
+  frmCustomer in 'Form Customer\frmCustomer.pas' {fmCustomer},
+  frmCustomerBankAccount in 'Form Customer Bank Account\frmCustomerBankAccount.pas' {fmCustomerBankAccount},
+  frmDeliveryOrder in 'Form Delivery Order\frmDeliveryOrder.pas' {fmDeliveryOrder},
+  frmDeliveryOrderPendingAndReject in 'Form Delivery Order Pending and Reject\frmDeliveryOrderPendingAndReject.pas' {fmDeliveryOrderPendingAndReject},
+  frmDeliveryOrderReprint in 'Form Delivery Order Reprint\frmDeliveryOrderReprint.pas' {fmDeliveryOrderReprint},
+  frmDisplayCustomerAR in 'Form Display Customer AR\frmDisplayCustomerAR.pas' {fmDisplayCustomerAR},
+  frmDisplayIndent in 'Form Display Ident\frmDisplayIndent.pas' {fmDisplayIndent},
+  frmDisplayPaidTransaction in 'Form Display Paid Transaction\frmDisplayPaidTransaction.pas' {fmDisplayPaidTransaction},
+  frmDisplayStock in 'Form Display Stock\frmDisplayStock.pas' {fmDisplayStock},
+  frmDisplayStockActual in 'Form Display Stock Actual\frmDisplayStockActual.pas' {fmDisplayStockActual},
+  frmDisplaySupplierAP in 'Form Display Supplier AR\frmDisplaySupplierAP.pas' {fmDisplaySupplierAP},
+  frmMainMenu in 'Form Main Menu\frmMainMenu.pas' {fmMainMenu},
+  frmMutation in 'Form Mutation\frmMutation.pas' {fmMutation},
+  frmNotes in 'Form Notes\frmNotes.pas' {fmNotes},
+  frmOtherTransaction in 'Form Other Transaction\frmOtherTransaction.pas' {fmOtherTransaction},
+  frmPaymentType in 'Form Payment Type\frmPaymentType.pas' {fmPaymentType},
+  frmPreviewPurchaseInvoice in 'Form Preview Purchase Invoice\frmPreviewPurchaseInvoice.pas' {fmPreviewPurchaseInvoice},
+  frmPreviewRRAndPO in 'Form Preview RR and PO\frmPreviewRRAndPO.pas' {fmPreviewRRAndPO},
+  frmPreviewSalesInvoice in 'Form Preview Sales Invoice\frmPreviewSalesInvoice.pas' {fmPreviewSalesInvoice},
+  frmPreviewSO in 'Form Preview Sales Order\frmPreviewSO.pas' {fmPreviewSO},
+  frmPurchaseDownPayment in 'Form Purchase Down Payment\frmPurchaseDownPayment.pas' {fmPurchaseDownPayment},
+  frmPurchaseInvoice in 'Form Purchase Invoice\frmPurchaseInvoice.pas' {fmPurchaseInvoice},
+  frmPurchaseInvoiceEdit in 'Form Purchase Invoice Edit\frmPurchaseInvoiceEdit.pas' {fmPurchaseInvoiceEdit},
+  frmPurchaseOrder in 'Form Purchase Order\frmPurchaseOrder.pas' {fmPurchaseOrder},
+  frmPurchasePayment in 'Form Purchase Payment\frmPurchasePayment.pas' {fmPurchasePayment},
+  frmPurchasePaymentApproval in 'Form Purchase Payment\frmPurchasePaymentApproval.pas' {fmPurchasePaymentApproval},
+  frmPurchasePaymentPay in 'Form Purchase Payment\frmPurchasePaymentPay.pas' {fmPurchasePaymentPay},
+  frmPurchasePrice in 'Form Purchase Price\frmPurchasePrice.pas' {fmPurchasePrice},
+  frmPurchaseReturn in 'Form Purchase Return\frmPurchaseReturn.pas' {fmPurchaseReturn},
+  frmReceivingRecord in 'Form Receiving Record\frmReceivingRecord.pas' {fmReceivingRecord},
+  frmReminder in 'Form Reminder\frmReminder.pas' {fmReminder},
+  frmSalePrice in 'Form Sale Price\frmSalePrice.pas' {fmSalePrice},
+  frmSalesDownPayment in 'Form Sales Down Payment\frmSalesDownPayment.pas' {fmSalesDownPayment},
+  frmSalesInvoice in 'Form Sales Invoice\frmSalesInvoice.pas' {fmSalesInvoice},
+  frmSalesInvoiceEdit in 'Form Sales Invoice Edit\frmSalesInvoiceEdit.pas' {fmSalesInvoiceEdit},
+  frmSalesInvoiceReprint in 'Form Sales Invoice Reprint\frmSalesInvoiceReprint.pas' {fmSalesInvoiceReprint},
+  frmSalesOrder in 'Form Sales Order\frmSalesOrder.pas' {fmSalesOrder},
+  frmSalesPayment in 'Form Sales Payment\frmSalesPayment.pas' {fmSalesPayment},
+  frmSalesPaymentApproval in 'Form Sales Payment\frmSalesPaymentApproval.pas' {fmSalesPaymentApproval},
+  frmSalesPaymentPay in 'Form Sales Payment\frmSalesPaymentPay.pas' {fmSalesPaymentPay},
+  frmSalesReturn in 'Form Sales Return\frmSalesReturn.pas' {fmSalesReturn},
+  frmSupplier in 'Form Supplier\frmSupplier.pas' {fmSupplier},
+  frmSupplierBankAccount in 'Form Supplier Bank Account\frmSupplierBankAccount.pas' {fmSupplierBankAccount},
+  frmSupplies in 'Form Supplies\frmSupplies.pas' {fmSupplies},
+  frmSuppliesCategory in 'Form Supplies Category\frmSuppliesCategory.pas' {fmSuppliesCategory},
+  frmTransactionType in 'Form Transaction Type\frmTransactionType.pas' {fmTransactionType},
+  frmWarehouse in 'Form Warehouse\frmWarehouse.pas' {fmWarehouse};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Zetron Inventory';
+  untConstanta.FProgramId := untConstanta.PROGRAM_ID_INVENTORY_CUSTOM01;
+  untConstanta.FProgramName := untConstanta.PROGRAM_NAME_INVENTORY_CUSTOM01;
+  Application.CreateForm(TdmGlobal, dmGlobal);
+  Application.CreateForm(TdmInventory, dmInventory);
+  Application.CreateForm(TdmAccounting, dmAccounting);
+  Application.CreateForm(TdmShare, dmShare);
+  Application.CreateForm(TfmMainMenu, fmMainMenu);
+  Application.Run;
+end.
+
+
+
