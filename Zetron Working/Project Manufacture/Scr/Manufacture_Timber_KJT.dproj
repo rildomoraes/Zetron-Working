@@ -1,0 +1,433 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{5E6A0EA6-D5DB-4AF2-8F33-7D58EB1EF8AB}</ProjectGuid>
+			<MainSource>Manufacture_Timber_KJT.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>D:\Zetron Executable\Manufacture\Manufacture_Timber_KJT.exe</DCC_DependencyCheckOutputName>
+			<DCC_ExeOutput>D:\Zetron Executable\Manufacture\</DCC_ExeOutput>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+			<DCC_S>false</DCC_S>
+			<DCC_N>true</DCC_N>
+			<DebugSourcePath>D:\VCL\ZEOSDBO-6.6.2-rc\src\dbc\;$(DebugSourcePath)</DebugSourcePath>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_E>false</DCC_E>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Manufacture_Timber_KJT.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\..\Modul General\Library\Ioctl.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untConstanta.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untFastReport.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untInitVCL.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untProcedure.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untZetronServer.pas"/>
+			<DCCReference Include="..\..\Modul General\Data Module Global\dtmGlobal.pas">
+				<Form>dmGlobal</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUni.pas">
+				<Form>FormUni</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDB.pas">
+				<Form>FormUniDB</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBEditableEx.pas">
+				<Form>FormUniDBEditableEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigator.pas">
+				<Form>FormUniDBNavigator</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigatorEx.pas">
+				<Form>FormUniDBNavigatorEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBPrintableEx.pas">
+				<Form>FormUniDBPrintableEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplay.pas">
+				<Form>FormUniDisplay</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplayPeriod.pas">
+				<Form>FormUniDisplayPeriod</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMainMenu.pas">
+				<Form>FormUniMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniManufacture.pas">
+				<Form>FormUniManufacture</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMasterEx.pas">
+				<Form>FormUniMasterEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniPosition.pas">
+				<Form>FormUniPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniTransactionEx.pas">
+				<Form>FormUniTransactionEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form About\frmAbout.pas">
+				<Form>fmAbout</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Backup Database\frmBackupDatabase.pas">
+				<Form>fmBackupDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Change Password\frmChangePassword.pas">
+				<Form>fmChangePassword</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form City\frmCity.pas">
+				<Form>fmCity</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Closing Date\frmClosingDate.pas">
+				<Form>fmClosingDate</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Company\frmCompany.pas">
+				<Form>fmCompany</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Country\frmCountry.pas">
+				<Form>fmCountry</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Currency\frmCurrency.pas">
+				<Form>fmCurrency</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Daily Kurs\frmDailyKurs.pas">
+				<Form>fmDailyKurs</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Department\frmDepartment.pas">
+				<Form>fmDepartment</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Employee\frmEmployee.pas">
+				<Form>fmEmployee</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Import Data\frmExportImportData.pas">
+				<Form>fmExportImportData</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Report\frmExportReport.pas">
+				<Form>fmExportReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Import Report\frmImportReport.pas">
+				<Form>fmImportReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Login\frmLogin.pas">
+				<Form>fmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Maintaince Database\frmMaintainceDatabase.pas">
+				<Form>fmMaintainceDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Menu Options\frmMenuOptions.pas">
+				<Form>fmMenuOptions</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Open Waiting\frmOpenWaiting.pas">
+				<Form>fmOpenWaiting</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Position\frmPosition.pas">
+				<Form>fmPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Preview FastReport\frmPreviewFastReport.pas">
+				<Form>fmPreviewFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Print FastReport\frmPrintFastReport.pas">
+				<Form>fmPrintFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Province\frmProvince.pas">
+				<Form>fmProvince</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Category\frmReportCategory.pas">
+				<Form>fmReportCategory</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Designer\frmReportDesigner.pas">
+				<Form>fmReportDesigner</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Restore Database\frmRestoreDatabase.pas">
+				<Form>fmRestoreDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Security\frmSecurity.pas">
+				<Form>fmSecurity</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Global\frmSettingGlobal.pas">
+				<Form>fmSettingGlobal</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Global\frmSettingGlobalInventory.pas">
+				<Form>fmSettingGlobalInventory</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Global\frmSettingGlobalTimber.pas">
+				<Form>fmSettingGlobalTimber</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Local\frmSettingLocal.pas">
+				<Form>fmSettingLocal</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul Accounting\Data Module Accounting\dtmAccounting.pas">
+				<Form>dmAccounting</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Module Inventory\dtmInventory.pas">
+				<Form>dmInventory</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Module Manufacture\dtmManufacture.pas">
+				<Form>dmManufacture</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Module Timber\dtmTimber.pas">
+				<Form>dmTimber</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul Accounting\Form COA\frmCOA.pas">
+				<Form>fmCOA</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bill Material\frmBillMaterial.pas">
+				<Form>fmBillMaterial</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bill Material\frmBillMaterialInsert.pas">
+				<Form>fmBillMaterialInsert</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bill Material\frmBillMaterialModify.pas">
+				<Form>fmBillMaterialModify</Form>
+			</DCCReference>
+			<DCCReference Include="Form Costing\frmCosting.pas">
+				<Form>fmCosting</Form>
+			</DCCReference>
+			<DCCReference Include="Form Costing Price\frmCostingPrice.pas">
+				<Form>fmCostingPrice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Customer\frmCustomer.pas">
+				<Form>fmCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="Form Customer Category\frmCustomerCategory.pas">
+				<Form>fmCustomerCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Stock\frmDisplayStock.pas">
+				<Form>fmDisplayStock</Form>
+			</DCCReference>
+			<DCCReference Include="Form Engine\frmEngine.pas">
+				<Form>fmEngine</Form>
+			</DCCReference>
+			<DCCReference Include="Form Entry Item Batch\frmEntryItemBatch.pas">
+				<Form>fmEntryItemBatch</Form>
+			</DCCReference>
+			<DCCReference Include="Form Grader\frmGrader.pas">
+				<Form>fmGrader</Form>
+			</DCCReference>
+			<DCCReference Include="Form Hasil Grade\frmHasilGrade.pas">
+				<Form>fmHasilGrade</Form>
+			</DCCReference>
+			<DCCReference Include="Form Hasil Grade\frmHasilGradeBalok.pas">
+				<Form>fmHasilGradeBalok</Form>
+			</DCCReference>
+			<DCCReference Include="Form Hasil Grade\frmHasilGradeEntry.pas">
+				<Form>fmHasilGradeEntry</Form>
+			</DCCReference>
+			<DCCReference Include="Form Hasil Grade\frmHasilGradeLog.pas">
+				<Form>fmHasilGradeLog</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item\frmItem.pas">
+				<Form>fmItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item Category\frmItemCategory.pas">
+				<Form>fmItemCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item\frmItemKayu.pas">
+				<Form>fmItemKayu</Form>
+			</DCCReference>
+			<DCCReference Include="Form Koor Grader\frmKoorGrader.pas">
+				<Form>fmKoorGrader</Form>
+			</DCCReference>
+			<DCCReference Include="Form LHP\frmLHP.pas">
+				<Form>fmLHP</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu KJT\frmMainMenu.pas">
+				<Form>fmMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="Form Material\frmMaterial.pas">
+				<Form>fmMaterial</Form>
+			</DCCReference>
+			<DCCReference Include="Form Outlet\frmOutlet.pas">
+				<Form>fmOutlet</Form>
+			</DCCReference>
+			<DCCReference Include="Form Penerimaan Barang\frmPenerimaanBarang.pas">
+				<Form>fmPenerimaanBarang</Form>
+			</DCCReference>
+			<DCCReference Include="Form Penerimaan Barang\frmPenerimaanBarangItem.pas">
+				<Form>fmPenerimaanBarangItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Penerimaan Barang\frmPenerimaanBarangKayuBalok.pas">
+				<Form>fmPenerimaanBarangKayuBalok</Form>
+			</DCCReference>
+			<DCCReference Include="Form Penerimaan Barang\frmPenerimaanBarangKayuEntry.pas">
+				<Form>fmPenerimaanBarangKayuEntry</Form>
+			</DCCReference>
+			<DCCReference Include="Form Penerimaan Barang\frmPenerimaanBarangKayuLog.pas">
+				<Form>fmPenerimaanBarangKayuLog</Form>
+			</DCCReference>
+			<DCCReference Include="Form Permintaan Bahan\frmPermintaanBahan.pas">
+				<Form>fmPermintaanBahan</Form>
+			</DCCReference>
+			<DCCReference Include="Form Permintaan Bahan\frmPermintaanBahanBalok.pas">
+				<Form>fmPermintaanBahanBalok</Form>
+			</DCCReference>
+			<DCCReference Include="Form Permintaan Bahan\frmPermintaanBahanLog.pas">
+				<Form>fmPermintaanBahanLog</Form>
+			</DCCReference>
+			<DCCReference Include="Form PO Manufacture\frmPOManufacture.pas">
+				<Form>fmPOManufacture</Form>
+			</DCCReference>
+			<DCCReference Include="Form PO Manufacture\frmPOManufactureBalok.pas">
+				<Form>fmPOManufactureBalok</Form>
+			</DCCReference>
+			<DCCReference Include="Form PO Manufacture\frmPOManufactureItem.pas">
+				<Form>fmPOManufactureItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form PO Manufacture\frmPOManufactureLog.pas">
+				<Form>fmPOManufactureLog</Form>
+			</DCCReference>
+			<DCCReference Include="Form Production Unit\frmProductionUnit.pas">
+				<Form>fmProductionUnit</Form>
+			</DCCReference>
+			<DCCReference Include="Form Project\frmProject.pas">
+				<Form>fmProject</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Invoice\frmPurchaseInvoice.pas">
+				<Form>fmPurchaseInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Price\frmPurchasePrice.pas">
+				<Form>fmPurchasePrice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Price List\frmPurchasePriceList.pas">
+				<Form>fmPurchasePriceList</Form>
+			</DCCReference>
+			<DCCReference Include="Form Rough Size\frmRoughSize.pas">
+				<Form>fmRoughSize</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sale Price\frmSalePrice.pas">
+				<Form>fmSalePrice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sale Price List\frmSalePriceList.pas">
+				<Form>fmSalePriceList</Form>
+			</DCCReference>
+			<DCCReference Include="Form Shipping\frmShipping.pas">
+				<Form>fmShipping</Form>
+			</DCCReference>
+			<DCCReference Include="Form SO Manufacture\frmSOManufacture.pas">
+				<Form>fmSOManufacture</Form>
+			</DCCReference>
+			<DCCReference Include="Form SPK\frmSPK.pas">
+				<Form>fmSPK</Form>
+			</DCCReference>
+			<DCCReference Include="Form SPK\frmSPKBOM.pas">
+				<Form>fmSPKBOM</Form>
+			</DCCReference>
+			<DCCReference Include="Form Table Log\frmTableLog.pas">
+				<Form>fmTableLog</Form>
+			</DCCReference>
+			<DCCReference Include="Form Tallyman\frmTallyman.pas">
+				<Form>fmTallyman</Form>
+			</DCCReference>
+			<DCCReference Include="Form Tally Sheet Grade\frmTallySheetGrade.pas">
+				<Form>fmTallySheetGrade</Form>
+			</DCCReference>
+			<DCCReference Include="Form Vendor\frmVendor.pas">
+				<Form>fmVendor</Form>
+			</DCCReference>
+			<DCCReference Include="Form Vendor Category\frmVendorCategory.pas">
+				<Form>fmVendorCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Warehouse\frmWarehouse.pas">
+				<Form>fmWarehouse</Form>
+			</DCCReference>
+			<DCCReference Include="Form Tally Entry\frmTallyEntry.pas">
+				<Form>fmTallyEntry</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">Manufacture_Timber_KJT.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">6</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Zetron System</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.6</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright">Copyright ® 2009</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Zetron Manufacture Timber</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k120.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp120.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

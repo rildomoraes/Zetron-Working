@@ -1,0 +1,199 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{54CDFE94-E9E2-4001-9987-64B5335A3623}</ProjectGuid>
+			<MainSource>POS_Cashier.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;acQueryBuilderD14;acQueryBuilderADOD14;acQueryBuilderBDED14;acQueryBuilderIbExD14;acQueryBuilderDbExD14;cxPageControlD14;cxSchedulerD14;dxDockingD14;dxRibbonD14;dxBarD14;acQueryBuilderUniDACD14;QExport4RT_D12;QImport3RT_D12;TortoiseSVN;USBIOCOM;dacvcl140;dac140;CRControls140;unidacvcl140;unidac140;fsTee14;fs14;frx14;frxADO14;frxBDE14;frxcs14;frxDB14;frxDBX14;frxe14;frxIBX14;frxTee14;fsADO14;fsBDE14;fsDB14;fsIBX14;frxUniDAC14;frxDAC14;fsUniDAC14;fsDAC14;dxCoreD14;cxLibraryD14;cxEditorsD14;cxExtEditorsD14;dxComnD14;dxsbD14;dxBarDBNavD14;cxBarEditItemD14;dxBarExtDBItemsD14;dxBarExtItemsD14;cxGridD14;dxLayoutControlD14;cxSpreadSheetD14;cxTreeListD14;cxTreeListdxBarPopupMenuD14;cxVerticalGridD14;dxFlowChartD14;cxSchedulerGridD14;dxorgcD14;dxdborD14;dxmdsD14;dxdbtrD14;dxtrmdD14;dxPSCoreD14;dxPSLnksD14;dxPScxCommonD14;dxPScxExtCommonD14;dxPScxPCProdD14;dxPScxSSLnkD14;dxPScxTL5LnkD14;dxPScxVGridLnkD14;dxPSTeeChartD14;dxPSDBTeeChartD14;dxPSdxDBTVLnkD14;dxPSdxFCLnkD14;dxPSdxOCLnkD14;dxPSdxDBOCLnkD14;dxPsPrVwAdvD14;dxPSPrVwRibbonD14;dxPScxGrid6LnkD14;dxPScxScheduler3LnkD14;cxPivotGridD14;cxPivotGridChartD14;cxPivotGridOLAPD14;dxSpellCheckerD14;IvComponentDevExpressRT14;IvComponentInstanceControlRT14;IvComponentUSBControlRT14;IvComponentMasterRT14</DCC_UsePackage>
+			<UsePackages>true</UsePackages>
+			<DCC_DependencyCheckOutputName>D:\Zetron Executable\Inventory\POS_Cashier.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_UnitSearchPath>Lib;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_ExeOutput>D:\Zetron Executable\Inventory\</DCC_ExeOutput>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_E>false</DCC_E>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="POS_Cashier.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\..\Modul General\Library\Ioctl.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untConstanta.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untFastReport.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untInitVCL.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untProcedure.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untZetronServer.pas"/>
+			<DCCReference Include="Library\untConstantaPos.pas"/>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUni.pas">
+				<Form>FormUni</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniPosition.pas">
+				<Form>FormUniPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Open Waiting\frmOpenWaiting.pas">
+				<Form>fmOpenWaiting</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General DAC\Data Modul Global\dtmGlobal.pas">
+				<Form>dmGlobal</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul Register\dtmRegister.pas">
+				<Form>dmRegister</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul Share\dtmShare.pas">
+				<Form>dmShare</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmCardEntry.pas">
+				<Form>fmCardEntry</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmChangePrice.pas">
+				<Form>fmChangePrice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmGetFPValidation.pas">
+				<Form>fmGetFPValidation</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmGetValidation.pas">
+				<Form>fmGetValidation</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Input Box Datetime\frmInputBoxDatetime.pas">
+				<Form>fmInputBoxDatetime</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Input Box Decimal\frmInputBoxDecimal.pas">
+				<Form>fmInputBoxDecimal</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Input Box String\frmInputBoxString.pas">
+				<Form>fmInputBoxString</Form>
+			</DCCReference>
+			<DCCReference Include="Form Login Cashier\frmLoginCashier.pas">
+				<Form>fmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmMainMenuCashier.pas">
+				<Form>fmMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmPaymentInfo.pas">
+				<Form>fmPaymentInfo</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmPhysicalCounter.pas">
+				<Form>fmPhysicalCounter</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Preview FastReport\frmPreviewFastReport.pas">
+				<Form>fmPreviewFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Preview FastReport ShowModal\frmPreviewFastReportShowModal.pas">
+				<Form>fmPreviewFastReportShowModal</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Print FastReport\frmPrintFastReport.pas">
+				<Form>fmPrintFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmRegisterPayment.pas">
+				<Form>fmRegisterPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmRegisterPurchasePayment.pas">
+				<Form>fmRegisterPurchasePayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmRegisterSalesPayment.pas">
+				<Form>fmRegisterSalesPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmSearchInvoice.pas">
+				<Form>fmSearchInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu Cashier\frmSearchItem.pas">
+				<Form>fmSearchItem</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">POS_Cashier.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">5</VersionInfo>
+						<VersionInfo Name="Build">5</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Zetron System</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.5.5</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

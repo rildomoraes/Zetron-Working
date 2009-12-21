@@ -1,0 +1,361 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{42EE92FB-8C2A-429A-8CBD-FA64ED87A15D}</ProjectGuid>
+			<MainSource>Payroll.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;dbrtl;Rave76VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;vclib;ibxpress;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;intrawebdb_100_120;Intraweb_100_120;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DataSnapServer;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;dxCoreD12;cxLibraryD12;cxEditorsD12;cxExtEditorsD12;dxmdsD12;dxBarD12;dxBarDBNavD12;dxBarExtDBItemsD12;dxBarExtItemsD12;dxdbtrD12;dxtrmdD12;dxDockingD12;dxFlowChartD12;dxLayoutControlD12;dxNavBarD12;dxorgcD12;dxdborD12;cxPageControlD12;cxGridD12;cxPivotGridD12;cxPivotGridOLAPD12;cxPivotGridChartD12;cxTreeListD12;cxTreeListdxBarPopupMenuD12;cxSchedulerD12;cxSchedulerGridD12;dxComnD12;dxsbD12;dcldxSkinsCoreD12;dxSkinsCoreD12;dxSkinscxScheduler3PainterD12;dxSkinsdxDLPainterD12;dxSkinsdxRibbonPainterD12;dxSkinsdxBarPainterD12;dxRibbonD12;dxSkinsdxNavBar2PainterD12;dxSpellCheckerD12;cxSpreadSheetD12;cxVerticalGridD12;dxPSLnksD12;dxPSCoreD12;vclshlctrls;dxPScxPivotGrid2LnkD12;dxPScxCommonD12;dxPScxScheduler3LnkD12;dxPScxTL5LnkD12;dxPScxVGridLnkD12;dxPSdxDBOCLnkD12;dxPSdxOCLnkD12;dxPSdxDBTVLnkD12;dxPScxGrid6LnkD12;DigitalPersona;USBIOCOM;TortoiseSVN;acQueryBuilderD12;acQueryBuilderADOD12;acQueryBuilderBDED12;QExport4RT_D12;QImport3RT_D12;dacvcl120;dac120;CRControls120;unidacvcl120;unidac120;frx12;fsTee12;fs12;fsIBX12;fsDB12;fsBDE12;fsADO12;frxTee12;frxIBX12;frxe12;frxDBX12;frxDB12;frxcs12;frxBDE12;frxADO12;fsUniDAC12;fsDAC12;frxUniDAC12;frxDAC12;acQueryBuilderUniDACD12;IvComponentMasterRT12;IvComponentDevExpressRT12;IvComponentInstanceControlRT12;IvComponentUSBControlRT12</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>D:\Zetron Executable\Payroll\</DCC_ExeOutput>
+			<DCC_DependencyCheckOutputName>D:\Zetron Executable\Payroll\Payroll.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Payroll.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\..\Modul General\Library\Ioctl.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untConstanta.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untFastReport.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untInitVCL.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untProcedure.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untZetronServer.pas"/>
+			<DCCReference Include="..\..\Modul General\Form Open Waiting\frmOpenWaiting.pas">
+				<Form>fmOpenWaiting</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUni.pas">
+				<Form>FormUni</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDB.pas">
+				<Form>FormUniDB</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBEditableEx.pas">
+				<Form>FormUniDBEditableEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigator.pas">
+				<Form>FormUniDBNavigator</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigatorEx.pas">
+				<Form>FormUniDBNavigatorEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBPrintableEx.pas">
+				<Form>FormUniDBPrintableEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplay.pas">
+				<Form>FormUniDisplay</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplayPeriod.pas">
+				<Form>FormUniDisplayPeriod</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMasterEx.pas">
+				<Form>FormUniMasterEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniPosition.pas">
+				<Form>FormUniPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniTransactionEx.pas">
+				<Form>FormUniTransactionEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Data Module Global\dtmGlobal.pas">
+				<Form>dmGlobal</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form About\frmAbout.pas">
+				<Form>fmAbout</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Backup Database\frmBackupDatabase.pas">
+				<Form>fmBackupDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Change Password\frmChangePassword.pas">
+				<Form>fmChangePassword</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form City\frmCity.pas">
+				<Form>fmCity</Form>
+			</DCCReference>
+			<DCCReference Include="Form Closing Date\frmClosingDate.pas">
+				<Form>fmClosingDate</Form>
+			</DCCReference>
+			<DCCReference Include="Form Closing Year\frmClosingYear.pas">
+				<Form>fmClosingYear</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Company\frmCompany.pas">
+				<Form>fmCompany</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Country\frmCountry.pas">
+				<Form>fmCountry</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Department\frmDepartment.pas">
+				<Form>fmDepartment</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Employee\frmEmployee.pas">
+				<Form>fmEmployee</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Enrollment FingerPrint\frmEnrollmentFingerPrint.pas">
+				<Form>fmEnrollmentFingerPrint</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Import Data\frmExportImportData.pas">
+				<Form>fmExportImportData</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Report\frmExportReport.pas">
+				<Form>fmExportReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Import Report\frmImportReport.pas">
+				<Form>fmImportReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Login\frmLogin.pas">
+				<Form>fmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Maintaince Database\frmMaintainceDatabase.pas">
+				<Form>fmMaintainceDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Position\frmPosition.pas">
+				<Form>fmPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Preview FastReport\frmPreviewFastReport.pas">
+				<Form>fmPreviewFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Print FastReport\frmPrintFastReport.pas">
+				<Form>fmPrintFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Province\frmProvince.pas">
+				<Form>fmProvince</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Designer\frmReportDesigner.pas">
+				<Form>fmReportDesigner</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Security\frmSecurity.pas">
+				<Form>fmSecurity</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Local\frmSettingLocal.pas">
+				<Form>fmSettingLocal</Form>
+			</DCCReference>
+			<DCCReference Include="Data Module General\dtmGeneral.pas">
+				<Form>dmGeneral</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Module Share\dtmShare.pas">
+				<Form>dmShare</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Form Absen Manual\frmAbsenManual.pas">
+				<Form>fmAbsenManual</Form>
+			</DCCReference>
+			<DCCReference Include="Form Assets\frmAssets.pas">
+				<Form>fmAssets</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bahasa\frmBahasa.pas">
+				<Form>fmBahasa</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bank\frmBank.pas">
+				<Form>fmBank</Form>
+			</DCCReference>
+			<DCCReference Include="Form Capture Foto\frmCaptureFoto.pas">
+				<Form>fmCaptureFoto</Form>
+			</DCCReference>
+			<DCCReference Include="Form Closing Shift\frmClosingShift.pas">
+				<Form>fmClosingShift</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Absen\frmDisplayAbsen.pas">
+				<Form>fmDisplayAbsensi</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Gaji\frmDisplayGaji.pas">
+				<Form>fmDisplayGaji</Form>
+			</DCCReference>
+			<DCCReference Include="Form DisplayGaji2\frmDisplayGaji2.pas">
+				<Form>fmDisplayGaji2</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Gaji3\frmDisplayGaji3.pas">
+				<Form>fmDisplayGaji3</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Gaji4\frmDisplayGaji4.pas">
+				<Form>fmDisplayGaji4</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Mutasi\frmDisplayMutasi.pas">
+				<Form>fmDisplayMutasi</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Slip Gaji\frmDisplaySlipGaji.pas">
+				<Form>fmDisplaySlipGaji</Form>
+			</DCCReference>
+			<DCCReference Include="Form Group Shift\frmGroupShift.pas">
+				<Form>fmGroupShift</Form>
+			</DCCReference>
+			<DCCReference Include="Form Jabatan\frmJabatan.pas">
+				<Form>fmJabatan</Form>
+			</DCCReference>
+			<DCCReference Include="Form Keahlian\frmKeahlian.pas">
+				<Form>fmKeahlian</Form>
+			</DCCReference>
+			<DCCReference Include="Form KodeAbsen\frmKodeAbsen.pas">
+				<Form>fmKodeAbsen</Form>
+			</DCCReference>
+			<DCCReference Include="Form Libur\frmLibur.pas">
+				<Form>fmLibur</Form>
+			</DCCReference>
+			<DCCReference Include="Form Master Gaji\frmMasterGaji.pas">
+				<Form>fmMasterGaji</Form>
+			</DCCReference>
+			<DCCReference Include="Form MasterJam Kerja\frmMasterJamKerja.pas">
+				<Form>fmMasterJamKerja</Form>
+			</DCCReference>
+			<DCCReference Include="Form Mutasi\frmMutasi.pas">
+				<Form>fmMutasi</Form>
+			</DCCReference>
+			<DCCReference Include="Form OutSourcing\frmOutSourcing.pas">
+				<Form>fmOutSourcing</Form>
+			</DCCReference>
+			<DCCReference Include="Form Payroll Pegawai\frmPayrollPegawai.pas">
+				<Form>fmPayrollPegawai</Form>
+			</DCCReference>
+			<DCCReference Include="Form Payroll Period\frmPayrollPeriod.pas">
+				<Form>fmPayrollPeriod</Form>
+			</DCCReference>
+			<DCCReference Include="Form Payroll Rule\frmPayrollRule.pas">
+				<Form>fmPayrollRule</Form>
+			</DCCReference>
+			<DCCReference Include="Form Payroll Type\frmPayrollType.pas">
+				<Form>fmKomponenPayroll</Form>
+			</DCCReference>
+			<DCCReference Include="Form Pegawai\frmPegawai.pas">
+				<Form>fmPegawai</Form>
+			</DCCReference>
+			<DCCReference Include="Form Pendidikan\frmPendidikan.pas">
+				<Form>fmPendidikan</Form>
+			</DCCReference>
+			<DCCReference Include="Form Pengambilan Payroll\frmPengambilanPayroll.pas">
+				<Form>fmPengambilanPayroll</Form>
+			</DCCReference>
+			<DCCReference Include="Form Person Validation\frmPersonValidation.pas">
+				<Form>fmPersonValidation</Form>
+			</DCCReference>
+			<DCCReference Include="Form Print Foto\frmPrintFoto.pas">
+				<Form>fmPrintFoto</Form>
+			</DCCReference>
+			<DCCReference Include="Form Proses Harian\frmProsesHarian.pas">
+				<Form>fmProsesHarian</Form>
+			</DCCReference>
+			<DCCReference Include="Form Proses Periode\frmProsesPeriode.pas">
+				<Form>fmProsesPeriode</Form>
+			</DCCReference>
+			<DCCReference Include="Form Schedulling\frmSchedulling.pas">
+				<Form>fmSchedulling</Form>
+			</DCCReference>
+			<DCCReference Include="Form Setting Global\frmSettingGlobal.pas">
+				<Form>fmSettingGlobal</Form>
+			</DCCReference>
+			<DCCReference Include="Form SPL\frmSPL.pas">
+				<Form>fmSPL</Form>
+			</DCCReference>
+			<DCCReference Include="Form Status Karyawan\frmStatusKaryawan.pas">
+				<Form>fmStatusKaryawan</Form>
+			</DCCReference>
+			<DCCReference Include="Form Struktur\frmStruktur.pas">
+				<Form>fmStruktur</Form>
+			</DCCReference>
+			<DCCReference Include="Form Transaksi\frmTransaksi.pas">
+				<Form>fmTransaksi</Form>
+			</DCCReference>
+			<DCCReference Include="Form Transaksi Payroll\frmTransaksiPayroll.pas">
+				<Form>fmTransaksiPayroll</Form>
+			</DCCReference>
+			<DCCReference Include="Library\untPayroll.pas"/>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMainMenu.pas">
+				<Form>FormUniMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu\frmMainMenu.pas">
+				<Form>fmMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Category\frmReportCategory.pas">
+				<Form>fmReportCategory</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Counter\frmCounter.pas">
+				<Form>fmCounter</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">Payroll.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">5</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Zetron System</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.5</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion"/>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k120.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp120.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

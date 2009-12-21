@@ -1,0 +1,536 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{5E6A0EA6-D5DB-4AF2-8F33-7D58EB1EF8AB}</ProjectGuid>
+			<MainSource>POS_Enterprise.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vcl;rtl;vclx;vclimg;vclactnband;dbrtl;vcldb;vcldbx;bdertl;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;acQueryBuilderD14;acQueryBuilderADOD14;acQueryBuilderBDED14;acQueryBuilderIbExD14;acQueryBuilderDbExD14;dxSkinscxPCPainterD14;cxPageControlD14;dxSkinsCoreD14;dxSkinscxScheduler3PainterD14;cxSchedulerD14;dxSkinsdxNavBar2PainterD14;dxNavBarD14;dxSkinsdxDLPainterD14;dxDockingD14;dxSkinsdxRibbonPainterD14;dxRibbonD14;dxBarD14;dxSkinsdxBarPainterD14;acQueryBuilderUniDACD14;QImport3RT_D14;TortoiseSVN;USBIOCOM;dacvcl140;dac140;CRControls140;unidacvcl140;unidac140;fsTee14;fs14;frx14;frxADO14;frxBDE14;frxcs14;frxDB14;frxDBX14;frxe14;frxIBX14;frxTee14;fsADO14;fsBDE14;fsDB14;fsIBX14;frxUniDAC14;frxDAC14;fsUniDAC14;fsDAC14;dxCoreD14;cxLibraryD14;cxEditorsD14;cxExtEditorsD14;dxComnD14;dxsbD14;dxBarDBNavD14;cxBarEditItemD14;dxBarExtDBItemsD14;dxBarExtItemsD14;cxGridD14;dxLayoutControlD14;cxSpreadSheetD14;cxTreeListD14;cxTreeListdxBarPopupMenuD14;cxVerticalGridD14;dxFlowChartD14;cxSchedulerGridD14;dxorgcD14;dxdborD14;dxmdsD14;dxdbtrD14;dxtrmdD14;dxPSCoreD14;dxPSLnksD14;dxPScxCommonD14;dxPScxExtCommonD14;dxPScxPCProdD14;dxPScxSSLnkD14;dxPScxTL5LnkD14;dxPScxVGridLnkD14;dxPSTeeChartD14;dxPSDBTeeChartD14;dxPSdxDBTVLnkD14;dxPSdxFCLnkD14;dxPSdxOCLnkD14;dxPSdxDBOCLnkD14;dxPsPrVwAdvD14;dxPSPrVwRibbonD14;dxPScxGrid6LnkD14;dxPScxScheduler3LnkD14;cxPivotGridD14;cxPivotGridChartD14;cxPivotGridOLAPD14;dcldxSkinsCoreD14;dxSkinBlackD14;dxSkinBlueD14;dxSkinSilverD14;dxSkinStardustD14;dxSkinValentineD14;dxSkinXmas2008BlueD14;dxSkinCaramelD14;dxSkinCoffeeD14;dxSkinPumpkinD14;dxSkinDarkSideD14;dxSkinGlassOceansD14;dxSkiniMaginaryD14;dxSkinLilianD14;dxSkinMcSkinD14;dxSkinLiquidSkyD14;dxSkinLondonLiquidSkyD14;dxSkinMoneyTwinsD14;dxSkinOffice2007BlackD14;dxSkinOffice2007BlueD14;dxSkinOffice2007GreenD14;dxSkinOffice2007PinkD14;dxSkinOffice2007SilverD14;dxSkinSummer2008D14;dxSkinSpringTimeD14;dxSkinSevenD14;dxSkinFoggyD14;dxSkinDarkRoomD14;dxSkinSharpD14;dxSpellCheckerD14;IvComponentDevExpressRT14;IvComponentInstanceControlRT14;IvComponentUSBControlRT14;IvComponentMasterRT14;QExport4RT_D14</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DependencyCheckOutputName>D:\Zetron Executable\Inventory\POS_Enterprise.exe</DCC_DependencyCheckOutputName>
+			<DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>D:\Zetron Executable\Inventory\</DCC_ExeOutput>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+			<DCC_K>false</DCC_K>
+			<DCC_F>false</DCC_F>
+			<DCC_S>false</DCC_S>
+			<DCC_N>true</DCC_N>
+			<DebugSourcePath>D:\VCL\ZEOSDBO-6.6.2-rc\src\dbc\;$(DebugSourcePath)</DebugSourcePath>
+			<DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+			<DCC_E>false</DCC_E>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="POS_Enterprise.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\..\Modul General\Library\Ioctl.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untConstanta.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untFastReport.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untInitVCL.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untProcedure.pas"/>
+			<DCCReference Include="..\..\Modul General\Library\untZetronServer.pas"/>
+			<DCCReference Include="Library\untConstantaPos.pas"/>
+			<DCCReference Include="..\..\Modul General\Form Open Waiting\frmOpenWaiting.pas">
+				<Form>fmOpenWaiting</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUni.pas">
+				<Form>FormUni</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDB.pas">
+				<Form>FormUniDB</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigator.pas">
+				<Form>FormUniDBNavigator</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplay.pas">
+				<Form>FormUniDisplay</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDisplayPeriod.pas">
+				<Form>FormUniDisplayPeriod</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMainMenu.pas">
+				<Form>FormUniMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniPosition.pas">
+				<Form>FormUniPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBEditableEx.pas">
+				<Form>FormUniDBEditableEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniTransactionEx.pas">
+				<Form>FormUniTransactionEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General DAC\Data Modul Global\dtmGlobal.pas">
+				<Form>dmGlobal</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul Accounting\dtmAccounting.pas">
+				<Form>dmAccounting</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul General\dtmGeneral.pas">
+				<Form>dmGeneral</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul Inventory\dtmInventory.pas">
+				<Form>dmInventory</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Data Modul Share\dtmShare.pas">
+				<Form>dmShare</Form>
+				<DesignClass>TDataModul</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form About\frmAbout.pas">
+				<Form>fmAbout</Form>
+			</DCCReference>
+			<DCCReference Include="Form Adjustment Stock Minus\frmAdjustmentStockMinus.pas">
+				<Form>fmAdjustmentStockMinus</Form>
+			</DCCReference>
+			<DCCReference Include="Form AdjustmentStockPlus\frmAdjustmentStockPlus.pas">
+				<Form>fmAdjustmentStockPlus</Form>
+			</DCCReference>
+			<DCCReference Include="Form AP Adjustment Customer\frmAPAdjustmentCustomer.pas">
+				<Form>fmAPAdjustmentCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="Form AP Adjustment Vendor\frmAPAdjustmentVendor.pas">
+				<Form>fmAPAdjustmentVendor</Form>
+			</DCCReference>
+			<DCCReference Include="Form AR Adjustment Customer\frmARAdjustmentCustomer.pas">
+				<Form>fmARAdjustmentCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="Form AR Adjustment Vendor\frmARAdjustmentVendor.pas">
+				<Form>fmARAdjustmentVendor</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Backup Database\frmBackupDatabase.pas">
+				<Form>fmBackupDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bank\frmBank.pas">
+				<Form>fmBank</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bank Adjustment\frmBankAdjustment.pas">
+				<Form>fmBankAdjustment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Bank Transaction\frmBankTransaction.pas">
+				<Form>fmBankTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Cash Bank Transaction Type\frmCashBankTransactionType.pas">
+				<Form>fmCashBankTransactionType</Form>
+			</DCCReference>
+			<DCCReference Include="Form Cash Register\frmCashRegister.pas">
+				<Form>fmCashRegister</Form>
+			</DCCReference>
+			<DCCReference Include="Form Cash Register Transaction\frmCashRegisterTransaction.pas">
+				<Form>fmCashRegisterTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Cash Transaction\frmCashTransaction.pas">
+				<Form>fmCashTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Category\frmCategory.pas">
+				<Form>fmCategory</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Change Password\frmChangePassword.pas">
+				<Form>fmChangePassword</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form City\frmCity.pas">
+				<Form>fmCity</Form>
+			</DCCReference>
+			<DCCReference Include="Form Closing Date\frmClosingDate.pas">
+				<Form>fmClosingDate</Form>
+			</DCCReference>
+			<DCCReference Include="Form Closing Year\frmClosingYear.pas">
+				<Form>fmClosingYear</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Company\frmCompany.pas">
+				<Form>fmCompany</Form>
+			</DCCReference>
+			<DCCReference Include="Form Copy Item\frmCopyItem.pas">
+				<Form>fmCopyItem</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Country\frmCountry.pas">
+				<Form>fmCountry</Form>
+			</DCCReference>
+			<DCCReference Include="Form Couple\frmCouple.pas">
+				<Form>fmCouple</Form>
+			</DCCReference>
+			<DCCReference Include="Form Currency\frmCurrency.pas">
+				<Form>fmCurrency</Form>
+			</DCCReference>
+			<DCCReference Include="Form Customer\frmCustomer.pas">
+				<Form>fmCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Department\frmDepartment.pas">
+				<Form>fmDepartment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display AP and AR Customer\frmDisplayAPandARCustomer.pas">
+				<Form>fmDisplayAPandARCustomer</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display AP and AR Vendor\frmDisplayAPandARVendor.pas">
+				<Form>fmDisplayAPandARVendor</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Bank Transaction\frmDisplayBankTransaction.pas">
+				<Form>fmDisplayBankTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Cash Transaction\frmDisplayCashTransaction.pas">
+				<Form>fmDisplayCashTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Couple\frmDisplayCouple.pas">
+				<Form>fmDisplayCouple</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Giro\frmDisplayGiro.pas">
+				<Form>fmDisplayGiro</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Item Price\frmDisplayItemPrice.pas">
+				<Form>fmDisplayItemPrice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Item Price 2\frmDisplayItemPrice2.pas">
+				<Form>fmDisplayItemPrice2</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Item Stock\frmDisplayItemStock.pas">
+				<Form>fmDisplayItemStock</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Order\frmDisplayOrder.pas">
+				<Form>fmDisplayOrder</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Other Transaction\frmDisplayOtherTransaction.pas">
+				<Form>fmDisplayOtherTransaction</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Purchase Invoice\frmDisplayPurchaseInvoice.pas">
+				<Form>fmDisplayPurchaseInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Purchase Order\frmDisplayPurchaseOrder.pas">
+				<Form>fmDisplayPurchaseOrder</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Purchase Payment\frmDisplayPurchasePayment.pas">
+				<Form>fmDisplayPurchasePayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Purchase Return\frmDisplayPurchaseReturn.pas">
+				<Form>fmDisplayPurchaseReturn</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Purchase Return Payment\frmDisplayPurchaseReturnPayment.pas">
+				<Form>fmDisplayPurchaseReturnPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Invoice\frmDisplaySalesInvoice.pas">
+				<Form>fmDisplaySalesInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Invoice Revenue\frmDisplaySalesInvoiceRevenue.pas">
+				<Form>fmDisplaySalesInvoiceRevenue</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Order\frmDisplaySalesOrder.pas">
+				<Form>fmDisplaySalesOrder</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Payment\frmDisplaySalesPayment.pas">
+				<Form>fmDisplaySalesPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Return\frmDisplaySalesReturn.pas">
+				<Form>fmDisplaySalesReturn</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Sales Return Payment\frmDisplaySalesReturnPayment.pas">
+				<Form>fmDisplaySalesReturnPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Display Stock\frmDisplayStock.pas">
+				<Form>fmDisplayStock</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Employee\frmEmployee.pas">
+				<Form>fmEmployee</Form>
+			</DCCReference>
+			<DCCReference Include="Form Engine\frmEngine.pas">
+				<Form>fmEngine</Form>
+			</DCCReference>
+			<DCCReference Include="Form Engine Group\frmEngineGroup.pas">
+				<Form>fmEngineGroup</Form>
+			</DCCReference>
+			<DCCReference Include="Form Engine Group Job\frmEngineGroupJob.pas">
+				<Form>fmEngineGroupJob</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Enrollment FingerPrint\frmEnrollmentFingerPrint.pas">
+				<Form>fmEnrollmentFingerPrint</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Import Data\frmExportImportData.pas">
+				<Form>fmExportImportData</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Export Report\frmExportReport.pas">
+				<Form>fmExportReport</Form>
+			</DCCReference>
+			<DCCReference Include="Form Ext Seach Item\frmExtSearchItem.pas">
+				<Form>fmExtSearchItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Giro\frmGiro.pas">
+				<Form>fmGiro</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Import Report\frmImportReport.pas">
+				<Form>fmImportReport</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item\frmItem.pas">
+				<Form>fmItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item Category\frmItemCategory.pas">
+				<Form>fmItemCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item\frmItemEnt.pas">
+				<Form>fmItemEnt</Form>
+			</DCCReference>
+			<DCCReference Include="Form Item\frmItemPro.pas">
+				<Form>fmItemPro</Form>
+			</DCCReference>
+			<DCCReference Include="Form Job Type\frmJobType.pas">
+				<Form>fmJobType</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General DAC\Form Login\frmLogin.pas">
+				<Form>fmLogin</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu\frmMainMenu.pas">
+				<Form>fmMainMenu</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu\frmMainMenuEnt.pas">
+				<Form>fmMainMenuEnt</Form>
+			</DCCReference>
+			<DCCReference Include="Form Main Menu\frmMainMenuPro.pas">
+				<Form>fmMainMenuPro</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Maintaince Database\frmMaintainceDatabase.pas">
+				<Form>fmMaintainceDatabase</Form>
+			</DCCReference>
+			<DCCReference Include="Form Mutasi\frmMutasi.pas">
+				<Form>fmMutasi</Form>
+			</DCCReference>
+			<DCCReference Include="Form Outlet\frmOutlet.pas">
+				<Form>fmOutlet</Form>
+			</DCCReference>
+			<DCCReference Include="Form Payment Type\frmPaymentType.pas">
+				<Form>fmPaymentType</Form>
+			</DCCReference>
+			<DCCReference Include="Form Physical Counter\frmPhysicalCounter.pas">
+				<Form>fmPhysicalCounter</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Position\frmPosition.pas">
+				<Form>fmPosition</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Preview FastReport\frmPreviewFastReport.pas">
+				<Form>fmPreviewFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="Form Price Changed\frmPriceChanged.pas">
+				<Form>fmPriceChanged</Form>
+			</DCCReference>
+			<DCCReference Include="Form Print Barcode\frmPrintBarcode.pas">
+				<Form>fmPrintBarcode</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Print FastReport\frmPrintFastReport.pas">
+				<Form>fmPrintFastReport</Form>
+			</DCCReference>
+			<DCCReference Include="Form Project\frmProject.pas">
+				<Form>fmProject</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Province\frmProvince.pas">
+				<Form>fmProvince</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Category\frmPurchaseCategory.pas">
+				<Form>fmPurchaseCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Invoice\frmPurchaseInvoice.pas">
+				<Form>fmPurchaseInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Invoice Cash Payment\frmPurchaseInvoiceCashPayment.pas">
+				<Form>fmPurchaseInvoiceCashPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Invoice\frmPurchaseInvoiceEnt.pas">
+				<Form>fmPurchaseInvoiceEnt</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Invoice\frmPurchaseInvoicePro.pas">
+				<Form>fmPurchaseInvoicePro</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Order\frmPurchaseOrder.pas">
+				<Form>fmPurchaseOrder</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Order Item\frmPurchaseOrderItem.pas">
+				<Form>fmPurchaseOrderItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Payment\frmPurchasePayment.pas">
+				<Form>fmPurchasePayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Price Change\frmPurchasePriceChange.pas">
+				<Form>fmPurchasePriceChange</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Return\frmPurchaseReturn.pas">
+				<Form>fmPurchaseReturn</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Return Cash Payment\frmPurchaseReturnCashPayment.pas">
+				<Form>fmPurchaseReturnCashPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Return Item\frmPurchaseReturnItem.pas">
+				<Form>fmPurchaseReturnItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Purchase Return Payment\frmPurchaseReturnPayment.pas">
+				<Form>fmPurchaseReturnPayment</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Category\frmReportCategory.pas">
+				<Form>fmReportCategory</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Report Designer\frmReportDesigner.pas">
+				<Form>fmReportDesigner</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sale Price Change\frmSalePriceChange.pas">
+				<Form>fmSalePriceChange</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Category\frmSalesCategory.pas">
+				<Form>fmSalesCategory</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Invoice\frmSalesInvoice.pas">
+				<Form>fmSalesInvoice</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Invoice Cash Payment\frmSalesInvoiceCashPayment.pas">
+				<Form>fmSalesInvoiceCashPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Invoice\frmSalesInvoiceEnt.pas">
+				<Form>fmSalesInvoiceEnt</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Invoice\frmSalesInvoicePro.pas">
+				<Form>fmSalesInvoicePro</Form>
+			</DCCReference>
+			<DCCReference Include="Form Salesman\frmSalesman.pas">
+				<Form>fmSalesman</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Order\frmSalesOrder.pas">
+				<Form>fmSalesOrder</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Order Item\frmSalesOrderItem.pas">
+				<Form>fmSalesOrderItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Payment\frmSalesPayment.pas">
+				<Form>fmSalesPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Return\frmSalesReturn.pas">
+				<Form>fmSalesReturn</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Return Cash Payment\frmSalesReturnCashPayment.pas">
+				<Form>fmSalesReturnCashPayment</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Return Item\frmSalesReturnItem.pas">
+				<Form>fmSalesReturnItem</Form>
+			</DCCReference>
+			<DCCReference Include="Form Sales Return Payment\frmSalesReturnPayment.pas">
+				<Form>fmSalesReturnPayment</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Security\frmSecurity.pas">
+				<Form>fmSecurity</Form>
+			</DCCReference>
+			<DCCReference Include="Form Setting Global\frmSettingGlobal.pas">
+				<Form>fmSettingGlobal</Form>
+			</DCCReference>
+			<DCCReference Include="Form Setting Global\frmSettingGlobalEnt.pas">
+				<Form>fmSettingGlobalEnt</Form>
+			</DCCReference>
+			<DCCReference Include="Form Setting Global\frmSettingGlobalPro.pas">
+				<Form>fmSettingGlobalPro</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Setting Local\frmSettingLocal.pas">
+				<Form>fmSettingLocal</Form>
+			</DCCReference>
+			<DCCReference Include="Form Shift\frmShift.pas">
+				<Form>fmShift</Form>
+			</DCCReference>
+			<DCCReference Include="Form Shipping\frmShipping.pas">
+				<Form>fmShipping</Form>
+			</DCCReference>
+			<DCCReference Include="Form Transaction Type\frmTransactionType.pas">
+				<Form>fmTransactionType</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniDBNavigatorEx.pas">
+				<Form>FormUniDBNavigatorEx</Form>
+			</DCCReference>
+			<DCCReference Include="Form Vendor\frmVendor.pas">
+				<Form>fmVendor</Form>
+			</DCCReference>
+			<DCCReference Include="Form Warehouse\frmWarehouse.pas">
+				<Form>fmWarehouse</Form>
+			</DCCReference>
+			<DCCReference Include="..\..\Modul General\Form Template\frmUniMasterEx.pas">
+				<Form>FormUniMasterEx</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">POS_Enterprise.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">5</VersionInfo>
+						<VersionInfo Name="Build">5</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1033</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Zetron System</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.5.5</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
